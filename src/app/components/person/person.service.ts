@@ -1,4 +1,4 @@
-import { Person } from './person.model';
+import { Person, PersonsDto } from './person.model';
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { MatSnackBar } from "@angular/material/snack-bar";
@@ -11,6 +11,7 @@ export class PersonService {
   baseUrl = "http://127.0.0.1:5000/pessoa";
   baseUrl2 = "http://127.0.0.1:5000/pessoas";
   //baseUrl2 = "http://localhost:3001/pessoas";
+  
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) {}
 
@@ -27,7 +28,7 @@ export class PersonService {
     return this.http.post<Person>(this.baseUrl, person)
   }
 
-  read(): Observable<Person[]>{
-    return this.http.get<Person[]>(this.baseUrl2)
+  read(): Observable<PersonsDto>{
+    return this.http.get<PersonsDto>(this.baseUrl2)
   }
 }

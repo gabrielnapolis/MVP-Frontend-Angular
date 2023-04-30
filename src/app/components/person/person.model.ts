@@ -5,3 +5,5 @@ export interface Person {
     idade: number | null
     cpf: string
 }
+
+export interface PersonsDto { pessoas:Person[]}

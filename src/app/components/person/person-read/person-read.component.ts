@@ -16,9 +16,9 @@ export class PersonReadComponent implements OnInit {
   constructor(private personService: PersonService) {}
 
   ngOnInit(): void {
-    this.personService.read().subscribe((persons) => {
-      this.persons = persons;
-      console.log(this.persons);
+    this.personService.read().subscribe((resp) => {
+      console.log(resp);
+      this.persons = resp.pessoas;
     });
   }
 }
