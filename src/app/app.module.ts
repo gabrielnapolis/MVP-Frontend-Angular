@@ -34,7 +34,6 @@ import { PersonReadComponent } from './components/person/person-read/person-read
 import { PersonDeleteComponent } from './components/person/person-delete/person-delete.component';
 import { PersonUpdateComponent } from './components/person/person-update/person-update.component';
 import { PersonCrudComponent } from './views/person-crud/person-crud.component';
-import { CpfPipe } from '../app/components/person/cpf.pipe';
 
 registerLocaleData(localePT);
 
@@ -49,8 +48,7 @@ registerLocaleData(localePT);
     PersonReadComponent,
     PersonDeleteComponent,
     PersonUpdateComponent,
-    PersonCrudComponent,
-    CpfPipe
+    PersonCrudComponent
   ],
   imports: [
     BrowserModule,
