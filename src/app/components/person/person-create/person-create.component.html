@@ -15,7 +15,7 @@
       </mat-form-field>
       <mat-form-field>
         <input matInput placeholder="CPF" 
-          [(ngModel)]="person.cpf" name="cpf" mask="000.000.000-00"/>
+          [(ngModel)]="person.cpf" name="cpf" maxlength="15"/>
       </mat-form-field>
     </form>
   
@@ -27,4 +27,4 @@
     
     <button mat-raised-button (click)="cancel()">Cancelar</button>
   </div>
-  </mat-card>
+</mat-card>

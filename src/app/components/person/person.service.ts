@@ -31,4 +31,19 @@ export class PersonService {
   read(): Observable<PersonsDto>{
     return this.http.get<PersonsDto>(this.baseUrl2)
   }
+
+  readById(id: string): Observable<Person>{
+    const url = `${this.baseUrl}/${id}`
+    return this.http.get<Person>(url)
+  }
+
+  update(person: Person): Observable<Person> {
+    const url =  `${this.baseUrl}/${person.id}`
+    return this.http.put<Person>(url, person)
+  }
+
+  delete(person: Person): Observable<Person> {
+    const url = `${this.baseUrl}/${person.id}`
+    return this.http.delete<Person>(url)
+  }
 }
